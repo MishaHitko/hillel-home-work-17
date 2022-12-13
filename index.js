@@ -22,3 +22,4 @@ function generateList(array) {
     document.body.append(list);
 };
 generateList(numArray);
+generateList(numbersArray);

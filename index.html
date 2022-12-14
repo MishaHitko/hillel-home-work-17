@@ -5,12 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-<button class="btn"><a class="link" href="google.com">Ссыкла без протокола</a></button>
-<button class="btn"><a class="link" href="https://google.com">Ссыкла c протоколам</a></button>
+<div class="wrapper"></div>
 <style>
-    a {
-        text-decoration: none;
-        color: black;
+    .wrapper {
+        display: flex;
+    }
+    .blockSmile {
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .smiles {
+        cursor: pointer;
     }
 </style>
 <script src="index.js"></script>

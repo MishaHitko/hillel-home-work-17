@@ -1,40 +1,31 @@
-class Symbol {
-    constructor(smile, wrapper) {
-        this.smile = smile;
-        this.wrapper = wrapper;
-        this.countVotes = 0;
-
-        this.createElement();
-        this.vote();
-    };
-
-    createElement() {
-        const block = document.createElement('div');
-        this.blockSmile = document.createElement('span');
-        this.count = document.createElement('p');
-
-        this.blockSmile.innerHTML = this.smile;
-        this.count.innerText = this.countVotes;
-
-        block.classList.add('blockSmile');
-        this.blockSmile.classList.add('smiles');
-
-        this.wrapper.append(block);
-        block.append(this.blockSmile);
-        block.append(this.count);
-    };
-
-    vote() {
-        this.blockSmile.addEventListener('click', () => {
-            this.countVotes += 1;
-            this.count.innerText = this.countVotes;
-        });
-    };
-};
-const wrapper = document.querySelector('.wrapper');
-
-const elem1 = new Symbol('&#9875;', wrapper);
-const elem2 = new Symbol('&#9990;', wrapper);
-const elem3 = new Symbol('&#9884;', wrapper);
-const elem4 = new Symbol('&#10026;', wrapper);
-const elem5 = new Symbol('&#9787;', wrapper);
+const btnNext = document.querySelector('.container-slider__btn-next');
+const btnPrev = document.querySelector('.container-slider__btn-prev');
+const img = [...document.querySelectorAll('.container-slider__item')];
+let count = 0;
+checkBtn(count);
+btnNext.addEventListener('click', () => {
+    if (count + 1 < img.length) {
+        img[count].classList.remove('container-slider__active');
+        img[count + 1].classList.add('container-slider__active');
+        count++;
+    }
+    checkBtn(count);
+});
+btnPrev.addEventListener('click', () => {
+    if (count > 0) {
+        img[count].classList.remove('container-slider__active');
+        img[count - 1].classList.add('container-slider__active');
+        count--;
+    }
+    checkBtn(count);
+});
+function checkBtn (count) {
+    if (count === 0) {
+        btnPrev.classList.add('button__none');
+    } else if (count === img.length - 1) {
+        btnNext.classList.add('button__none');
+    } else {
+        btnNext.classList.remove('button__none');
+        btnPrev.classList.remove('button__none');
+    }
+}

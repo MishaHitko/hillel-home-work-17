@@ -1,56 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<div class="container-slider">
-    <button class="container-slider__btn-prev">Prev</button>
-    <div class="container-slider__wrapper">
-        <div class="container-slider__item container-slider__active"><img src="./img/baby-turtle-g77e4a89f8_1920.jpg"></div>
-        <div class="container-slider__item"><img src="./img/light-g30462b241_1920.jpg"></div>
-        <div class="container-slider__item"><img src="./img/turtle-g7aa7bdb8d_1920.jpg"></div>
-    </div>
-    <button class="container-slider__btn-next">Next</button>
-</div>
-<style>
-    .container-slider__wrapper {
-        display: flex;
-        align-items: center;
-        width: 500px;
-        height: 500px;
-        margin: 0 auto;
-    }
-    .container-slider__item {
-        display: none;
-    }
-    .container-slider__active {
-        display: block;
-    }
-    img {
-        max-width: 100%;
-        object-fit: cover;
-    }
-    .container-slider {
-        display: flex;
-        align-items: center;
-        width: 1000px;
-        margin: 0 auto;
-    }
-    button {
-        display: block;
-        font-size: 20px;
-        padding: 10px 25px;
-        cursor: pointer;
-        background-color: aqua;
-        border: 1px solid aqua;
-        border-radius: 50px;
-    }
-    .button__none {
-        visibility: hidden;
-    }
-</style>
-<script src="index.js"></script>
-</body>
+<div class="blockShop"></div>
+<script type="module" src="./js/index.js"></script>
 </html>

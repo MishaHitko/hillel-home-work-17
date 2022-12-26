@@ -74,7 +74,7 @@ export function infoGoods(item) {
     const infoBlock = document.createElement('div');
     infoBlock.classList.add('info-block','blockShop__blocks-items');
     function buyHandler() {
-        modalIcon();
+        modalIcon(item);
         clearBlocks();
     };
 

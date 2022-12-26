@@ -42,3 +42,16 @@
     top: 0;
     right: 10px;
 }
+.form-none {
+    display: none;
+}
+.form-on {
+    display: block;
+}
+.invalidInput {
+    border: 1px solid red;
+}
+.invalidText {
+    color: red;
+
+}

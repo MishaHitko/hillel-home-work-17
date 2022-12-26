@@ -1,4 +1,5 @@
-import {categories, goods, info} from "./data.js";
-import {blockGoods, categoriesGoods, infoGoods} from "./creatElem.js";
+import {categories} from "./data.js";
+import {categoriesGoods} from "./creatElem.js";
+
 
 categoriesGoods(categories);

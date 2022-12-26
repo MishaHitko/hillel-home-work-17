@@ -38,7 +38,7 @@ export function modalIcon (item) {
         form.classList.add('form-none')
     }
 
-    form.oninput = ({target: input})
+    form.oninput = ({target: input}) => {
         const { value, required } = input;
         const validationMassage = input.nextElementSibling;
         console.log(required, value.length);
